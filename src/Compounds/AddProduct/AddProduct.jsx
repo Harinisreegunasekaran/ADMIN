@@ -232,7 +232,7 @@ const AddProduct = () => {
         }
 
         // Upload the image
-        await fetch('http://localhost:4000/upload', {
+        await fetch('https://backend-1-e20z.onrender.com/upload', {
             method: 'POST',
             // No 'Content-Type' header needed for FormData
             body: formData,
@@ -247,7 +247,7 @@ const AddProduct = () => {
             const updatedProduct = { ...productDetails, image: responseData.img_url };
 
             // Send the product details including the image URL
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('https://backend-1-e20z.onrender.com/addproduct', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
